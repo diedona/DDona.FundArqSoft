@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.Domain", "DDona.FundArqSoft.Domain\DDona.FundArqSoft.Domain.csproj", "{62888E73-647B-430B-87F4-CD734E19CDA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.ConsoleApp", "DDona.FundArqSoft.ConsoleApp\DDona.FundArqSoft.ConsoleApp.csproj", "{ECF3F8E9-1FD4-466F-B804-AE816D20E516}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62888E73-647B-430B-87F4-CD734E19CDA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62888E73-647B-430B-87F4-CD734E19CDA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62888E73-647B-430B-87F4-CD734E19CDA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62888E73-647B-430B-87F4-CD734E19CDA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54185259-0C2D-4DDF-A0AD-B0CA839822E6}
+	EndGlobalSection
+EndGlobal
