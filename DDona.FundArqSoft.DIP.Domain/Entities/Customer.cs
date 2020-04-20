@@ -22,5 +22,15 @@ namespace DDona.FundArqSoft.DIP.Domain.Entities
             Email = email;
             Trust = trust;
         }
+
+        public override bool Equals(object obj)
+        {
+            if(obj is Customer customer)
+            {
+                return customer.Id.Equals(this.Id);
+            }
+
+            return base.Equals(obj);
+        }
     }
 }

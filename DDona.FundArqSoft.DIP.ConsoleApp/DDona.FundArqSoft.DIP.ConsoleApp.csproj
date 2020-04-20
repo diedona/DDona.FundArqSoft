@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DDona.FundArqSoft.DIP.Domain\DDona.FundArqSoft.DIP.Domain.csproj" />
     <ProjectReference Include="..\DDona.FundArqSoft.DIP.Infra\DDona.FundArqSoft.DIP.Infra.csproj" />
+    <ProjectReference Include="..\DDona.FundArqSoft.DIP.Service\DDona.FundArqSoft.DIP.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

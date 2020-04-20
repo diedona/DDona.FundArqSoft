@@ -1,5 +1,6 @@
 ﻿using DDona.FundArqSoft.DIP.Domain.Entities;
 using DDona.FundArqSoft.DIP.Domain.Repositories;
+using DDona.FundArqSoft.DIP.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,31 +9,35 @@ namespace DDona.FundArqSoft.DIP.ConsoleApp
 {
     public class ProgramApp
     {
-        private readonly ICustomerRepository _customerRepository;
+        private readonly ICustomerService _CustomerService;
 
-        public ProgramApp(ICustomerRepository customerRepository)
+        public ProgramApp(ICustomerService customerService)
         {
-            _customerRepository = customerRepository;
+            _CustomerService = customerService;
         }
 
         public void Run()
         {
             Console.WriteLine("Hello there, i'm App.cs");
+            Dictionary<Customer, bool> customerStatus = new Dictionary<Customer, bool>();
 
-            Customer newCust = new Customer("Diego", "diedona@gmail.com", null);
-            _customerRepository.SaveCustomer(newCust);
+            Customer newCust1 = new Customer("Diego", "diedona@gmail.com", null);
+            customerStatus.Add(newCust1, _CustomerService.Save(newCust1));
 
-            Customer newCust2 = new Customer("Joseph", "joseph.gmail.com", null);
-            _customerRepository.SaveCustomer(newCust2);
+            Customer newCust2 = new Customer("Renato", "renato@google.com", null);
+            customerStatus.Add(newCust2, _CustomerService.Save(newCust2));
 
-            var customersAdded = _customerRepository.GetCustomers();
-            var errors = _customerRepository.Errors;
+            Customer newCust3 = new Customer("Joseph", "joseph.gmail.com", null);
+            customerStatus.Add(newCust3, _CustomerService.Save(newCust3));
+
+            var allCustomers = new List<Customer>() { newCust1, newCust2, newCust3 };
+            var errors = _CustomerService.Errors;
 
             Console.WriteLine();
-            Console.WriteLine("--- Customers: ---");
-            foreach (var customer in customersAdded)
+            Console.WriteLine("--- Customers in memory: ---");
+            foreach (var customer in allCustomers)
             {
-                Console.WriteLine($"{customer.Name} - {customer.Email}");
+                Console.WriteLine($"{IsCustomerOk(customer, customerStatus)} {customer.Name} - {customer.Email}");
             }
 
             Console.WriteLine();
@@ -44,6 +49,18 @@ namespace DDona.FundArqSoft.DIP.ConsoleApp
 
             Console.WriteLine();
             Console.WriteLine("End..");
+        }
+
+        private string IsCustomerOk(Customer customer, Dictionary<Customer, bool> customerStatus)
+        {
+            if (customerStatus.ContainsKey(customer))
+            {
+                return customerStatus[customer] ? "OK" : "FAILED";
+            }
+            else
+            {
+                return "~MISSING?~";
+            }
         }
     }
 }

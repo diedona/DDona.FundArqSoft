@@ -7,10 +7,7 @@ namespace DDona.FundArqSoft.DIP.Domain.Repositories
 {
     public interface ICustomerRepository
     {
-        IReadOnlyList<string> Errors { get; }
-
         bool SaveCustomer(Customer customer);
-        bool Validate(Customer customer);
-        IList<Customer> GetCustomers();
+        IList<Customer> GetAll();
     }
 }
