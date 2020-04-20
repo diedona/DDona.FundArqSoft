@@ -3,9 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.Domain", "DDona.FundArqSoft.Domain\DDona.FundArqSoft.Domain.csproj", "{62888E73-647B-430B-87F4-CD734E19CDA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.FundArqSoft.Domain", "DDona.FundArqSoft.Domain\DDona.FundArqSoft.Domain.csproj", "{62888E73-647B-430B-87F4-CD734E19CDA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.ConsoleApp", "DDona.FundArqSoft.ConsoleApp\DDona.FundArqSoft.ConsoleApp.csproj", "{ECF3F8E9-1FD4-466F-B804-AE816D20E516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDona.FundArqSoft.ConsoleApp", "DDona.FundArqSoft.ConsoleApp\DDona.FundArqSoft.ConsoleApp.csproj", "{ECF3F8E9-1FD4-466F-B804-AE816D20E516}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polimorfismo", "Polimorfismo", "{DA637F76-56E6-465B-9EB6-3057865B7B0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInversion", "DependencyInversion", "{18218799-87B1-4578-8DAC-0F13D6EED796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.DIP.ConsoleApp", "DDona.FundArqSoft.DIP.ConsoleApp\DDona.FundArqSoft.DIP.ConsoleApp.csproj", "{53BCCCEC-3565-4B30-9DB0-E43EE63DF8EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.DIP.Domain", "DDona.FundArqSoft.DIP.Domain\DDona.FundArqSoft.DIP.Domain.csproj", "{EC62AB10-2B8C-4C73-B37E-392BFDE0077B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.FundArqSoft.DIP.Infra", "DDona.FundArqSoft.DIP.Infra\DDona.FundArqSoft.DIP.Infra.csproj", "{AF81F89B-CB85-480A-AF69-1044609443B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +31,28 @@ Global
 		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECF3F8E9-1FD4-466F-B804-AE816D20E516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53BCCCEC-3565-4B30-9DB0-E43EE63DF8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BCCCEC-3565-4B30-9DB0-E43EE63DF8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BCCCEC-3565-4B30-9DB0-E43EE63DF8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BCCCEC-3565-4B30-9DB0-E43EE63DF8EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC62AB10-2B8C-4C73-B37E-392BFDE0077B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC62AB10-2B8C-4C73-B37E-392BFDE0077B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC62AB10-2B8C-4C73-B37E-392BFDE0077B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC62AB10-2B8C-4C73-B37E-392BFDE0077B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF81F89B-CB85-480A-AF69-1044609443B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF81F89B-CB85-480A-AF69-1044609443B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF81F89B-CB85-480A-AF69-1044609443B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF81F89B-CB85-480A-AF69-1044609443B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62888E73-647B-430B-87F4-CD734E19CDA7} = {DA637F76-56E6-465B-9EB6-3057865B7B0A}
+		{ECF3F8E9-1FD4-466F-B804-AE816D20E516} = {DA637F76-56E6-465B-9EB6-3057865B7B0A}
+		{53BCCCEC-3565-4B30-9DB0-E43EE63DF8EE} = {18218799-87B1-4578-8DAC-0F13D6EED796}
+		{EC62AB10-2B8C-4C73-B37E-392BFDE0077B} = {18218799-87B1-4578-8DAC-0F13D6EED796}
+		{AF81F89B-CB85-480A-AF69-1044609443B6} = {18218799-87B1-4578-8DAC-0F13D6EED796}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54185259-0C2D-4DDF-A0AD-B0CA839822E6}
