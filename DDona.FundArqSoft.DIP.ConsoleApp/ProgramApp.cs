@@ -1,5 +1,6 @@
 ﻿using DDona.FundArqSoft.DIP.Domain.Entities;
 using DDona.FundArqSoft.DIP.Domain.Repositories;
+using DDona.FundArqSoft.DIP.Service;
 using DDona.FundArqSoft.DIP.Service.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,18 @@ namespace DDona.FundArqSoft.DIP.ConsoleApp
     public class ProgramApp
     {
         private readonly ICustomerService _CustomerService;
+        private readonly ShowScope _ShowScope;
 
-        public ProgramApp(ICustomerService customerService)
+        public ProgramApp(ICustomerService customerService, ShowScope showScope)
         {
             _CustomerService = customerService;
+            _ShowScope = showScope;
         }
 
         public void Run()
         {
+            _ShowScope.ShowScopeConsole();
+
             Console.WriteLine("Hello there, i'm App.cs");
             Dictionary<Customer, bool> customerStatus = new Dictionary<Customer, bool>();
 
